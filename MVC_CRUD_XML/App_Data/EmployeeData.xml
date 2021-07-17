@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Student>
+  <item>
+    <id>1</id>
+    <first_name>Sanskriti</first_name>
+    <last_name>Tyagi</last_name>
+    <email_id>sanskritityagi6@gmail.com</email_id>
+    <password>sanskriti</password>
+    <dob>1/5/1990</dob>
+    <gender>Female</gender>
+    <cell_number>9854785698</cell_number>
+    <college>MJ</college>
+    <adress>Charminar</adress>
+    <city>Hyderabad</city>
+    <state>Telangana</state>
+    <pin>500053</pin>
+  </item>
+  <item>
+    <id>2</id>
+    <first_name>Mohak</first_name>
+    <last_name>Tyagi</last_name>
+    <email_id>tyagimohak26@gmail.com</email_id>
+    <password>mohak</password>
+    <dob>1/24/2015</dob>
+    <gender>Male</gender>
+    <cell_number>9059458123</cell_number>
+    <college>narayana</college>
+    <adress>hysd</adress>
+    <city>Hyderabad</city>
+    <state>Telangana</state>
+    <pin>5000028</pin>
+  </item>
+  <item>
+    <id>3</id>
+    <first_name>Radhika</first_name>
+    <last_name>Tyagi</last_name>
+    <email_id>radhika.tyagi@gmail.com</email_id>
+    <password>radhika</password>
+    <dob>1/24/2015</dob>
+    <gender>Female</gender>
+    <cell_number>0123456789</cell_number>
+    <college>Klr Engg college of technologies</college>
+    <adress>Tolli chowiki,Mehadhipatnam,Hyderabad.</adress>
+    <city>Hyderabad</city>
+    <state>Telangana</state>
+    <pin>501234</pin>
+  </item>
+  <item>
+    <id>4</id>
+    <first_name>suny</first_name>
+    <last_name>tyagi</last_name>
+    <email_id>suny.tyagi@gmail.com</email_id>
+    <password>sunytyagi</password>
+    <dob>1/20/1989</dob>
+    <gender>Male</gender>
+    <cell_number>8977545633</cell_number>
+    <college>Klr Engg college of technologies</college>
+    <adress>Tolli chowki ,near Mehadhipatnam,Hyderabad.</adress>
+    <city>Hyderabad</city>
+    <state>Telangana</state>
+    <pin>501234</pin>
+  </item>
+</Student>

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31409.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC_CRUD_XML", "MVC_CRUD_XML\MVC_CRUD_XML.csproj", "{EEA2296F-45D8-4300-A1E6-210B15DC1A30}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC_CRUD_XMLTests", "MVC_CRUD_XMLTests\MVC_CRUD_XMLTests.csproj", "{000C2AC3-92C7-4A7F-93B6-C5C504B739A9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EEA2296F-45D8-4300-A1E6-210B15DC1A30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEA2296F-45D8-4300-A1E6-210B15DC1A30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEA2296F-45D8-4300-A1E6-210B15DC1A30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEA2296F-45D8-4300-A1E6-210B15DC1A30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{000C2AC3-92C7-4A7F-93B6-C5C504B739A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{000C2AC3-92C7-4A7F-93B6-C5C504B739A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{000C2AC3-92C7-4A7F-93B6-C5C504B739A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{000C2AC3-92C7-4A7F-93B6-C5C504B739A9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1017C4AD-AA61-4023-B345-1382356D304C}
+	EndGlobalSection
+EndGlobal

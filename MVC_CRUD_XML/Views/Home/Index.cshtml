@@ -1,0 +1,51 @@
+﻿@model IEnumerable<MVC_CRUD_XML.Models.EmployeeModel>
+
+@{
+    ViewBag.Title = "Student Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@foreach (var item in Model)
+{
+    
+    
+    <article>
+        <h1>Hello Employee, you are signed in now!</h1>
+        <p style="color: green">
+            <b>@TempData["Sucss"]</b>
+        </p>
+    </article>
+    
+    <aside>
+        
+        <p style="text-align: left;">
+            Full name :  @Html.DisplayFor(modelItem => item.First_Name)&nbsp&nbsp  @Html.DisplayFor(modelItem => item.Last_Name)<br />
+            Email adress : @Html.DisplayFor(modelItem => item.Email_id)<br />
+        </p>
+    </aside> 
+    
+    <section>
+        <h1>Basic Employee Information</h1>
+        <hr />
+        <p>
+            Fist name :  @Html.DisplayFor(modelItem => item.First_Name)<br />
+            Last name : @Html.DisplayFor(modelItem => item.Last_Name)<br />
+            Gender :@Html.DisplayFor(modelItem => item.Gender)<br />
+            DOB :@Html.DisplayFor(modelItem => item.Dob)<br />
+            College :@Html.DisplayFor(modelItem => item.College)<br />
+            Cell Number :@Html.DisplayFor(modelItem => item.Cell_number)<br />
+
+        </p>
+    </section>
+
+    <section>
+        <h1>Employee Adress Details</h1>
+        <hr />
+        <p>
+            Address :@Html.DisplayFor(modelItem => item.Adress)<br />
+            City :@Html.DisplayFor(modelItem => item.City)<br />
+            State :@Html.DisplayFor(modelItem => item.State)<br />
+            Pin :@Html.DisplayFor(modelItem => item.Pin)<br />
+        </p>
+    </section>
+}

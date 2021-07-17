@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @{}
+    <script src="~/Scripts/jquery-1.8.2.js"></script>
+    <link href="~/Content/style.css" rel="stylesheet" />
+
+    <script>
+        $(function () {
+            var pull = $('#pull');
+            menu = $('nav ul');
+            menuHeight = menu.height();
+            $(pull).on('click', function (e) {
+                e.preventDefault();
+                menu.slideToggle();
+            });
+            $(window).resize(function () {
+                var w = $(window).width();
+                if (w > 320 && menu.is(':hidden')) {
+                    menu.removeAttr('style');
+                }
+            });
+        });
+    </script>
+
+    <style>
+        article
+        {
+            padding: 5px;
+            margin-top: 5px;
+        }
+
+        header
+        {
+            padding: 0px;
+            text-align: center;
+        }
+
+        aside
+        {
+            margin-top: 5px;
+            padding: 5px;
+            text-align: right;
+            font-style: italic;
+        }
+
+        section
+        {
+            padding: 5px;
+            margin-top: 5px;
+        }
+
+      
+    </style>
+
+</head>
+<body>
+
+    <!--------Header star----------->
+    <header style="">
+        <img src="~/Images/Logo_ProductUp.png" style="height: 40px; float: left;" />
+        <h4>CRUD in XML using ASP.NET MVC ---- Demo For ProductsUp </h4>
+    </header>
+    <!--------Header end----------->
+
+    <!--------Navigation start----------->
+    <nav class="clearfix">
+        <ul class="clearfix">
+            <li><a href="~/Home/index" style="float: left;">Home</a></li>
+            @if (TempData["Email"] != null && TempData["Pwd"] != null)
+            {
+                var employeeID = TempData["MyID"];
+                <li><a href="@Url.Action("UpdateEmployeeDetails", "Home", new { employeeID = @TempData["MyID"] })">Update</a></li>
+                <li><a href="@Url.Action("Delete", "Home", new { id = @TempData["MyID"] })">Delete</a></li>
+                <li><a href="~/Home/Signout">LogOut</a></li>
+            }
+                          
+            
+        </ul>
+        <a href="#" id="pull">Menu</a>
+    </nav>
+
+    <!--------Navigation end----------->
+
+    @RenderBody()
+
+   
+
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+</body>
+
+
+
+
+</html>

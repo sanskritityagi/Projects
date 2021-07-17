@@ -1,0 +1,242 @@
+﻿@model IEnumerable<MVC_CRUD_XML.Models.EmployeeModel>
+
+@{
+    ViewBag.Title = "UpdateEmployeeDetails";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script type="text/javascript">
+    $(function () {
+        $("#Date").datepicker();
+    });
+</script>
+<h2>UpdateStudentRegistartion</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+       
+
+        @foreach (var model in Model)
+        {
+             @Html.HiddenFor(model1 => model.ID)
+        <section>
+        <h1>Welcome, Employee Update Registration form</h1>
+        <p>
+            <fieldset>
+                <legend>Fill Employee Details </legend>
+                <table>
+                    <tr>
+                        <td>
+                            <div class="editor-label">
+                                <label>First Name :</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="editor-field">
+                                @Html.EditorFor(model1 => model.First_Name)
+                                @Html.ValidationMessageFor(model1 => model.First_Name)
+                            </div>
+                        </td>
+                        &nbsp&nbsp&nbsp&nbsp
+
+                        <td>
+                            <div class="editor-label">
+                                <label>Last Name :</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="editor-field">
+                                @Html.EditorFor(model1 => model.Last_Name)
+                                @Html.ValidationMessageFor(model1 => model.Last_Name)
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+@*                        <td>
+                            <div class="editor-label">
+                                <label>Upload image</label>
+                            </div>
+
+                        </td>
+                        <td>
+                            <div class="editor-field">
+                                <input type="file" name="file" />
+                                @Html.HiddenFor(mode1l => model.Upload_img)
+                                @Html.ValidationMessageFor(model1 => model.Upload_img)
+                            </div>
+                        </td>*@
+                         <td>
+                            <div class="editor-label">
+                                <label>Dateofbirth</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="editor-field">
+                                @Html.EditorFor(model1 => model.Dob, new {id="Date" })
+                                @Html.ValidationMessageFor(model1 => model.Dob)
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                           @* <div class="editor-label">
+                                <label>Email :</label>
+                            </div>*@
+                        </td>
+                        <td>
+                            <div class="editor-field">
+                                @Html.HiddenFor(model1 => model.Email_id)                                
+                            </div>
+                        </td>
+                        <td>
+                         @*   <div class="editor-label">
+                                <label>Password</label>
+                            </div>*@
+                        </td>
+                        <td>
+                            <div class="editor-field">
+                                @Html.HiddenFor(model1 => model.Password)                                
+                            </div>
+                        </td>
+
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class="editor-label">
+                                <label>Gender :</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="editor-field">
+                                @*  @Html.DropDownList("Gender", new List<SelectListItem>
+                                        {
+                                            new SelectListItem{ Text = "Male",  Value = "Male"},
+                                            new SelectListItem{ Text = "Female", Value = "Female"},
+                                      }, "Please select gender")   *@      
+                                @Html.EditorFor(model1 => model.Gender)                      
+                                @Html.ValidationMessageFor(model1 => model.Gender)
+                            </div>
+                        </td>
+                        <td>
+                            <div class="editor-label">
+                                <label>Cell No :</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="editor-field">
+                                @Html.EditorFor(model1 => model.Cell_number)
+                                @Html.ValidationMessageFor(model1 => model.Cell_number)
+                            </div>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td>
+                            <div class="editor-label">
+                                <label>College :</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="editor-field">
+                                @Html.EditorFor(model1 => model.College)
+                                @Html.ValidationMessageFor(model1 => model.College)
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="editor-label">
+                                <label>Address</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="editor-field">
+                                @Html.TextAreaFor(model1 => model.Adress, new { cols = 15, @rows = 1 })
+                                @Html.ValidationMessageFor(model1 => model.Adress)
+                            </div>
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+                        <td>
+                            <div class="editor-label">
+                                <label>City :</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="editor-field">
+                                @* @Html.DropDownList("City", new List<SelectListItem>
+                                        {
+                                            new SelectListItem{ Text = "Hyderabad",  Value = "Hyderabad"},
+                                            new SelectListItem{ Text = "Adilabad", Value = "Adilabad"},
+                                            new SelectListItem{ Text = "Khammam", Value = "Khammam"},
+                                            new SelectListItem{ Text = "Kadapa", Value = "Kadapa"},
+                                            new SelectListItem{ Text = "Thirupathi", Value = "Thirupathi"},
+                                      }, "Please select city")  *@
+
+                                @Html.EditorFor(model1 => model.City)
+                                @Html.ValidationMessageFor(model1 => model.City)
+                            </div>
+                        </td>
+                        <td>
+                            <div class="editor-label">
+                                <label>State :</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="editor-field">
+                               @* @Html.DropDownList("State", new List<SelectListItem>
+                                        {
+                                            new SelectListItem{ Text = "Telangana",  Value = "Telangana"},
+                                            new SelectListItem{ Text = "Andhra pradesh", Value = "Andhra pradesh"},
+                                      }, "Please select state")  *@
+                                @Html.EditorFor(model1 => model.State)
+                                @Html.ValidationMessageFor(model1 => model.State)
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="editor-label">
+                                <label>Pin No :</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="editor-field">
+                                @Html.EditorFor(model1 => model.Pin)
+                                @Html.ValidationMessageFor(model1 => model.Pin)
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <p>
+                    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="submit" id="submt" value="Update Values" />
+                </p>
+            </fieldset>
+        </p>
+    </section>
+        }
+        
+    </fieldset>
+}
+
+@*<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>*@
+<script>
+    $(document).ready(function () {
+        $("#submt").click(function () {
+            if ($("#City").val() == '') { alert("Please select city"); return false; }
+            if ($("#State").val() == '') { alert("Please select state"); return false; }
+        });
+    });
+</script>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
